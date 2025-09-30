@@ -2,6 +2,18 @@
 
 This is the official implementation of our paper [*AP2O: Correcting LLM-Generated Code Errors Type by Type Like Humans via Adaptive Progressive Preference Optimization*]().
 
+![](./figs/apo.png)
+Adaptive Progressive Preference Optimization
+
+![](./figs/z-error.png)
+Coding Error Reduction
+
+![](./figs/z-efficiency.png)
+Data Efficiency
+
+![](./figs/plot_eval_reward.png)
+Reward Curves
+
 ## Requirements
 - deepspeed 0.17.2
 - python 3.11.11 
