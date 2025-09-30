@@ -1,0 +1,69 @@
+# nohup python -u pipelining.py --gen_temp 1.0 --train_temp 0.01 --test_temp 0.6 --model_path Qwen2.5-Coder-0.5B-Instruct --train_data_path mbpp --jobs training --is_base True > _-mbpp-_-_-0.6-Qwen2.5-Coder-0.5B-Instruct.out 2>&1 &
+
+nohup python -u pipelining.py --gen_temp 1.0 --train_temp 0.01 --test_temp 0.6 --optim sft --task 100 --model_path Qwen2.5-Coder-0.5B-Instruct --all_devices 4,5 --batch_size 16 --n_epoch 200 --test_data_path mbpp --train_data_path mbpp --jobs sampling,annotating,merging,training > mbpp-mbpp-1.0-0.01-0.6-Qwen2.5-Coder-0.5B-Instruct-sft-200.out 2>&1 &
+nohup python -u pipelining.py --gen_temp 1.0 --train_temp 0.01 --test_temp 0.6 --optim dpo --task passk --model_path Qwen2.5-Coder-0.5B-Instruct --all_devices 6,7 --batch_size 16 --n_epoch 1 --test_data_path mbpp --train_data_path mbpp --jobs training > mbpp-mbpp-1.0-0.01-0.6-Qwen2.5-Coder-0.5B-Instruct-dpo-passk-1.out 2>&1 &
+nohup python -u pipelining.py --gen_temp 1.0 --train_temp 0.01 --test_temp 0.6 --optim dpo --task curri --model_path Qwen2.5-Coder-0.5B-Instruct --all_devices 2,3 --batch_size 16 --n_epoch 1 --test_data_path mbpp --train_data_path mbpp --jobs training > mbpp-mbpp-1.0-0.01-0.6-Qwen2.5-Coder-0.5B-Instruct-dpo-curri-1.out 2>&1 &
+
+nohup python -u pipelining.py --gen_temp 1.0 --train_temp 0.01 --test_temp 0.6 --optim dpo_dyn --task pvf --model_path Qwen2.5-Coder-0.5B-Instruct --all_devices 4,5 --batch_size 16 --n_epoch 200 --test_data_path mbpp --train_data_path mbpp --jobs training > mbpp-mbpp-1.0-0.01-0.6-Qwen2.5-Coder-0.5B-Instruct-dpo_dyn-pvf-200.out 2>&1 &
+nohup python -u pipelining.py --gen_temp 1.0 --train_temp 0.01 --test_temp 0.6 --optim dpo_dyn --task pvf_iter_priority --model_path Qwen2.5-Coder-0.5B-Instruct --all_devices 6,7 --batch_size 16 --n_epoch 200 --test_data_path mbpp --train_data_path mbpp --jobs training > mbpp-mbpp-1.0-0.01-0.6-Qwen2.5-Coder-0.5B-Instruct-dpo_dyn-pvf_iter_priority-200.out 2>&1 &
+nohup python -u pipelining.py --gen_temp 1.0 --train_temp 0.01 --test_temp 0.6 --optim dpo_dyn --task pvf_iter_reverse_priority --model_path Qwen2.5-Coder-0.5B-Instruct --all_devices 4,5 --batch_size 16 --n_epoch 200 --test_data_path mbpp --train_data_path mbpp --jobs training > mbpp-mbpp-1.0-0.01-0.6-Qwen2.5-Coder-0.5B-Instruct-dpo_dyn-pvf_iter_reverse_priority-200.out 2>&1 &
+
+
+
+# nohup python -u pipelining.py --gen_temp 1.0 --train_temp 0.01 --test_temp 0.6 --model_path Qwen2.5-Coder-1.5B-Instruct --train_data_path mbpp --jobs training --is_base True > _-mbpp-_-_-0.6-Qwen2.5-Coder-1.5B-Instruct.out 2>&1 &
+
+nohup python -u pipelining.py --gen_temp 1.0 --train_temp 0.01 --test_temp 0.6 --optim sft --task 100 --model_path Qwen2.5-Coder-1.5B-Instruct --all_devices 0,1 --batch_size 16 --n_epoch 200 --test_data_path mbpp --train_data_path mbpp --jobs sampling,annotating,merging,training > mbpp-mbpp-1.0-0.01-0.6-Qwen2.5-Coder-1.5B-Instruct-sft-200.out 2>&1 &
+nohup python -u pipelining.py --gen_temp 1.0 --train_temp 0.01 --test_temp 0.6 --optim dpo --task passk --model_path Qwen2.5-Coder-1.5B-Instruct --all_devices 6,7 --batch_size 16 --n_epoch 1 --test_data_path mbpp --train_data_path mbpp --jobs training > mbpp-mbpp-1.0-0.01-0.6-Qwen2.5-Coder-1.5B-Instruct-dpo-passk-1.out 2>&1 &
+nohup python -u pipelining.py --gen_temp 1.0 --train_temp 0.01 --test_temp 0.6 --optim dpo --task curri --model_path Qwen2.5-Coder-1.5B-Instruct --all_devices 0,1 --batch_size 16 --n_epoch 1 --test_data_path mbpp --train_data_path mbpp --jobs training > mbpp-mbpp-1.0-0.01-0.6-Qwen2.5-Coder-1.5B-Instruct-dpo-curri-1.out 2>&1 &
+
+nohup python -u pipelining.py --gen_temp 1.0 --train_temp 0.01 --test_temp 0.6 --optim dpo_dyn --task pvf --model_path Qwen2.5-Coder-1.5B-Instruct --all_devices 4,5 --batch_size 16 --n_epoch 200 --test_data_path mbpp --train_data_path mbpp --jobs training > mbpp-mbpp-1.0-0.01-0.6-Qwen2.5-Coder-1.5B-Instruct-dpo_dyn-pvf-200.out 2>&1 &
+nohup python -u pipelining.py --gen_temp 1.0 --train_temp 0.01 --test_temp 0.6 --optim dpo_dyn --task pvf_iter_priority --model_path Qwen2.5-Coder-1.5B-Instruct --all_devices 2,3 --batch_size 16 --n_epoch 200 --test_data_path mbpp --train_data_path mbpp --jobs training > mbpp-mbpp-1.0-0.01-0.6-Qwen2.5-Coder-1.5B-Instruct-dpo_dyn-pvf_iter_priority-200.out 2>&1 &
+nohup python -u pipelining.py --gen_temp 1.0 --train_temp 0.01 --test_temp 0.6 --optim dpo_dyn --task pvf_iter_reverse_priority --model_path Qwen2.5-Coder-1.5B-Instruct --all_devices 4,5 --batch_size 16 --n_epoch 200 --test_data_path mbpp --train_data_path mbpp --jobs training > mbpp-mbpp-1.0-0.01-0.6-Qwen2.5-Coder-1.5B-Instruct-dpo_dyn-pvf_iter_reverse_priority-200.out 2>&1 &
+
+
+
+# nohup python -u pipelining.py --gen_temp 1.0 --train_temp 0.01 --test_temp 0.6 --model_path Qwen2.5-Coder-3B-Instruct --train_data_path mbpp --jobs training --is_base True > _-mbpp-_-_-0.6-Qwen2.5-Coder-3B-Instruct.out 2>&1 &
+
+nohup python -u pipelining.py --gen_temp 1.0 --train_temp 0.01 --test_temp 0.6 --optim sft --task 100 --model_path Qwen2.5-Coder-3B-Instruct --all_devices 2,3 --batch_size 10 --n_epoch 200 --test_data_path mbpp --train_data_path mbpp --jobs sampling,annotating,merging,training > mbpp-mbpp-1.0-0.01-0.6-Qwen2.5-Coder-3B-Instruct-sft-200.out 2>&1 &
+nohup python -u pipelining.py --gen_temp 1.0 --train_temp 0.01 --test_temp 0.6 --optim dpo --task passk --model_path Qwen2.5-Coder-3B-Instruct --all_devices 4,5 --batch_size 10 --n_epoch 1 --test_data_path mbpp --train_data_path mbpp --jobs training > mbpp-mbpp-1.0-0.01-0.6-Qwen2.5-Coder-3B-Instruct-dpo-passk-1.out 2>&1 &
+nohup python -u pipelining.py --gen_temp 1.0 --train_temp 0.01 --test_temp 0.6 --optim dpo --task curri --model_path Qwen2.5-Coder-3B-Instruct --all_devices 0,1 --batch_size 10 --n_epoch 1 --test_data_path mbpp --train_data_path mbpp --jobs training > mbpp-mbpp-1.0-0.01-0.6-Qwen2.5-Coder-3B-Instruct-dpo-curri-1.out 2>&1 &
+
+nohup python -u pipelining.py --gen_temp 1.0 --train_temp 0.01 --test_temp 0.6 --optim dpo_dyn --task pvf --model_path Qwen2.5-Coder-3B-Instruct --all_devices 0,1 --batch_size 10 --n_epoch 200 --test_data_path mbpp --train_data_path mbpp --jobs training > mbpp-mbpp-1.0-0.01-0.6-Qwen2.5-Coder-3B-Instruct-dpo_dyn-pvf-200.out 2>&1 &
+nohup python -u pipelining.py --gen_temp 1.0 --train_temp 0.01 --test_temp 0.6 --optim dpo_dyn --task pvf_iter_priority --model_path Qwen2.5-Coder-3B-Instruct --all_devices 6,7 --batch_size 10 --n_epoch 200 --test_data_path mbpp --train_data_path mbpp --jobs training > mbpp-mbpp-1.0-0.01-0.6-Qwen2.5-Coder-3B-Instruct-dpo_dyn-pvf_iter_priority-200.out 2>&1 &
+nohup python -u pipelining.py --gen_temp 1.0 --train_temp 0.01 --test_temp 0.6 --optim dpo_dyn --task pvf_iter_reverse_priority --model_path Qwen2.5-Coder-3B-Instruct --all_devices 6,7 --batch_size 10 --n_epoch 200 --test_data_path mbpp --train_data_path mbpp --jobs training > mbpp-mbpp-1.0-0.01-0.6-Qwen2.5-Coder-3B-Instruct-dpo_dyn-pvf_iter_reverse_priority-200.out 2>&1 &
+
+
+
+# nohup python -u pipelining.py --gen_temp 1.0 --train_temp 0.01 --test_temp 0.6 --model_path Qwen2.5-Coder-7B-Instruct --train_data_path mbpp --jobs training --is_base True > _-mbpp-_-_-0.6-Qwen2.5-Coder-7B-Instruct.out 2>&1 &
+
+nohup python -u pipelining.py --gen_temp 1.0 --train_temp 0.01 --test_temp 0.6 --optim sft --task 100 --model_path Qwen2.5-Coder-7B-Instruct --all_devices 4,5 --batch_size 6 --n_epoch 200 --test_data_path mbpp --train_data_path mbpp --jobs sampling,annotating,merging,training > mbpp-mbpp-1.0-0.01-0.6-Qwen2.5-Coder-7B-Instruct-sft-200.out 2>&1 &
+nohup python -u pipelining.py --gen_temp 1.0 --train_temp 0.01 --test_temp 0.6 --optim dpo --task passk --model_path Qwen2.5-Coder-7B-Instruct --all_devices 0,1 --batch_size 6 --n_epoch 1 --test_data_path mbpp --train_data_path mbpp --jobs training > mbpp-mbpp-1.0-0.01-0.6-Qwen2.5-Coder-7B-Instruct-dpo-passk-1.out 2>&1 &
+nohup python -u pipelining.py --gen_temp 1.0 --train_temp 0.01 --test_temp 0.6 --optim dpo --task curri --model_path Qwen2.5-Coder-7B-Instruct --all_devices 6,7 --batch_size 6 --n_epoch 1 --test_data_path mbpp --train_data_path mbpp --jobs training > mbpp-mbpp-1.0-0.01-0.6-Qwen2.5-Coder-7B-Instruct-dpo-curri-1.out 2>&1 &
+
+nohup python -u pipelining.py --gen_temp 1.0 --train_temp 0.01 --test_temp 0.6 --optim dpo_dyn --task pvf --model_path Qwen2.5-Coder-7B-Instruct --all_devices 6,7 --batch_size 6 --n_epoch 200 --test_data_path mbpp --train_data_path mbpp --jobs training > mbpp-mbpp-1.0-0.01-0.6-Qwen2.5-Coder-7B-Instruct-dpo_dyn-pvf-200.out 2>&1 &
+nohup python -u pipelining.py --gen_temp 1.0 --train_temp 0.01 --test_temp 0.6 --optim dpo_dyn --task pvf_iter_priority --model_path Qwen2.5-Coder-7B-Instruct --all_devices 2,3 --batch_size 6 --n_epoch 200 --test_data_path mbpp --train_data_path mbpp --jobs training > mbpp-mbpp-1.0-0.01-0.6-Qwen2.5-Coder-7B-Instruct-dpo_dyn-pvf_iter_priority-200.out 2>&1 &
+nohup python -u pipelining.py --gen_temp 1.0 --train_temp 0.01 --test_temp 0.6 --optim dpo_dyn --task pvf_iter_reverse_priority --model_path Qwen2.5-Coder-7B-Instruct --all_devices 2,3 --batch_size 6 --n_epoch 200 --test_data_path mbpp --train_data_path mbpp --jobs training > mbpp-mbpp-1.0-0.01-0.6-Qwen2.5-Coder-7B-Instruct-dpo_dyn-pvf_iter_reverse_priority-200.out 2>&1 &
+
+
+
+# nohup python -u pipelining.py --gen_temp 1.0 --train_temp 0.01 --test_temp 0.6 --model_path Qwen2.5-Coder-14B-Instruct --train_data_path mbpp --jobs training --is_base True > _-mbpp-_-_-0.6-Qwen2.5-Coder-14B-Instruct.out 2>&1 &
+
+nohup python -u pipelining.py --gen_temp 1.0 --train_temp 0.01 --test_temp 0.6 --optim sft --task 100 --model_path Qwen2.5-Coder-14B-Instruct --all_devices 0,1,2,3 --batch_size 4 --n_epoch 200 --test_data_path mbpp --train_data_path mbpp --jobs sampling,annotating,merging,training > mbpp-mbpp-1.0-0.01-0.6-Qwen2.5-Coder-14B-Instruct-sft-200.out 2>&1 &
+nohup python -u pipelining.py --gen_temp 1.0 --train_temp 0.01 --test_temp 0.6 --optim dpo --task passk --model_path Qwen2.5-Coder-14B-Instruct --all_devices 4,5,6,7 --batch_size 4 --n_epoch 1 --test_data_path mbpp --train_data_path mbpp --jobs training > mbpp-mbpp-1.0-0.01-0.6-Qwen2.5-Coder-14B-Instruct-dpo-passk-1.out 2>&1 &
+nohup python -u pipelining.py --gen_temp 1.0 --train_temp 0.01 --test_temp 0.6 --optim dpo --task curri --model_path Qwen2.5-Coder-14B-Instruct --all_devices 4,5,6,7 --batch_size 4 --n_epoch 1 --test_data_path mbpp --train_data_path mbpp --jobs training > mbpp-mbpp-1.0-0.01-0.6-Qwen2.5-Coder-14B-Instruct-dpo-curri-1.out 2>&1 &
+
+nohup python -u pipelining.py --gen_temp 1.0 --train_temp 0.01 --test_temp 0.6 --optim dpo_dyn --task pvf --model_path Qwen2.5-Coder-14B-Instruct --all_devices 4,5,6,7 --batch_size 4 --n_epoch 200 --test_data_path mbpp --train_data_path mbpp --jobs training > mbpp-mbpp-1.0-0.01-0.6-Qwen2.5-Coder-14B-Instruct-dpo_dyn-pvf-200.out 2>&1 &
+nohup python -u pipelining.py --gen_temp 1.0 --train_temp 0.01 --test_temp 0.6 --optim dpo_dyn --task pvf_iter_priority --model_path Qwen2.5-Coder-14B-Instruct --all_devices 0,1,2,3 --batch_size 4 --n_epoch 200 --test_data_path mbpp --train_data_path mbpp --jobs training > mbpp-mbpp-1.0-0.01-0.6-Qwen2.5-Coder-14B-Instruct-dpo_dyn-pvf_iter_priority-200.out 2>&1 &
+nohup python -u pipelining.py --gen_temp 1.0 --train_temp 0.01 --test_temp 0.6 --optim dpo_dyn --task pvf_iter_reverse_priority --model_path Qwen2.5-Coder-14B-Instruct --all_devices 0,1,2,3 --batch_size 4 --n_epoch 200 --test_data_path mbpp --train_data_path mbpp --jobs training > mbpp-mbpp-1.0-0.01-0.6-Qwen2.5-Coder-14B-Instruct-dpo_dyn-pvf_iter_reverse_priority-200.out 2>&1 &
+
+
+
+# nohup python -u pipelining.py --gen_temp 1.0 --train_temp 0.01 --test_temp 0.6 --model_path Qwen2.5-Coder-32B-Instruct --train_data_path mbpp --jobs training --is_base True > _-mbpp-_-_-0.6-Qwen2.5-Coder-32B-Instruct.out 2>&1 &
+
+nohup python -u pipelining.py --gen_temp 1.0 --train_temp 0.01 --test_temp 0.6 --optim sft --task 100 --model_path Qwen2.5-Coder-32B-Instruct --all_devices 4,5,6,7 --batch_size 2 --n_epoch 200 --test_data_path mbpp --train_data_path mbpp --jobs sampling,annotating,merging,training > mbpp-mbpp-1.0-0.01-0.6-Qwen2.5-Coder-32B-Instruct-sft-200.out 2>&1 &
+nohup python -u pipelining.py --gen_temp 1.0 --train_temp 0.01 --test_temp 0.6 --optim dpo --task passk --model_path Qwen2.5-Coder-32B-Instruct --all_devices 0,1,2,3 --batch_size 2 --n_epoch 1 --test_data_path mbpp --train_data_path mbpp --jobs training > mbpp-mbpp-1.0-0.01-0.6-Qwen2.5-Coder-32B-Instruct-dpo-passk-1.out 2>&1 &
+nohup python -u pipelining.py --gen_temp 1.0 --train_temp 0.01 --test_temp 0.6 --optim dpo --task passk --model_path Qwen2.5-Coder-32B-Instruct --all_devices 4,5,6,7 --batch_size 2 --n_epoch 1 --test_data_path mbpp --train_data_path mbpp --jobs training > mbpp-mbpp-1.0-0.01-0.6-Qwen2.5-Coder-32B-Instruct-dpo-curri-1.out 2>&1 &
+
+nohup python -u pipelining.py --gen_temp 1.0 --train_temp 0.01 --test_temp 0.6 --optim dpo_dyn --task pvf --model_path Qwen2.5-Coder-32B-Instruct --all_devices 4,5,6,7 --batch_size 2 --n_epoch 200 --test_data_path mbpp --train_data_path mbpp --jobs training > mbpp-mbpp-1.0-0.01-0.6-Qwen2.5-Coder-32B-Instruct-dpo_dyn-pvf-200.out 2>&1 &
+nohup python -u pipelining.py --gen_temp 1.0 --train_temp 0.01 --test_temp 0.6 --optim dpo_dyn --task pvf_iter_priority --model_path Qwen2.5-Coder-32B-Instruct --all_devices 0,1,2,3 --batch_size 2 --n_epoch 200 --test_data_path mbpp --train_data_path mbpp --jobs training > mbpp-mbpp-1.0-0.01-0.6-Qwen2.5-Coder-32B-Instruct-dpo_dyn-pvf_iter_priority-200.out 2>&1 &
+nohup python -u pipelining.py --gen_temp 1.0 --train_temp 0.01 --test_temp 0.6 --optim dpo_dyn --task pvf_iter_reverse_priority --model_path Qwen2.5-Coder-32B-Instruct --all_devices 0,1,2,3 --batch_size 2 --n_epoch 200 --test_data_path mbpp --train_data_path mbpp --jobs training > mbpp-mbpp-1.0-0.01-0.6-Qwen2.5-Coder-32B-Instruct-dpo_dyn-pvf_iter_reverse_priority-200.out 2>&1 &

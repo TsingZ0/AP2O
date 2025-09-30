@@ -1,0 +1,69 @@
+{
+  "builder_name": "json",
+  "citation": "",
+  "config_name": "default",
+  "dataset_name": "json",
+  "dataset_size": 315497,
+  "description": "",
+  "download_checksums": {
+    "datasets/HumanEval/data/humaneval-python.jsonl": {
+      "num_bytes": 342974,
+      "checksum": null
+    }
+  },
+  "download_size": 342974,
+  "features": {
+    "stop_tokens": {
+      "feature": {
+        "dtype": "null",
+        "_type": "Value"
+      },
+      "_type": "Sequence"
+    },
+    "task_id": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "prompt": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "canonical_solution": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "test": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "text": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "declaration": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "example_test": {
+      "dtype": "string",
+      "_type": "Value"
+    }
+  },
+  "homepage": "",
+  "license": "",
+  "size_in_bytes": 658471,
+  "splits": {
+    "test": {
+      "name": "test",
+      "num_bytes": 315497,
+      "num_examples": 164,
+      "dataset_name": "json"
+    }
+  },
+  "version": {
+    "version_str": "0.0.0",
+    "major": 0,
+    "minor": 0,
+    "patch": 0
+  }
+}
