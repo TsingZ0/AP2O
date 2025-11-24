@@ -1,6 +1,6 @@
 ## Introduction
 
-This is the official implementation of our paper [*AP2O: Correcting LLM-Generated Code Errors Type by Type Like Humans via Adaptive Progressive Preference Optimization*](https://arxiv.org/abs/2510.02393). Accepted by AAAI'26.
+This is the official implementation of our paper [*AP2O-Coder: Human-Inspired Progressive Optimization to Fix LLM Code Errors*](https://arxiv.org/abs/2510.02393). Accepted by AAAI'26.
 
 ![](./figs/apo.png)
 Adaptive Progressive Preference Optimization
