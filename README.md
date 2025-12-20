@@ -2,6 +2,8 @@
 
 This is the official implementation of our paper [*AP2O-Coder: Adaptively Progressive Preference Optimization for Reducing Compilation and Runtime Errors in LLM-Generated Code*](https://arxiv.org/abs/2510.02393). Accepted by AAAI'26.
 
+- [Slides](./AP2O.pdf)
+
 ![](./figs/apo.png)
 Adaptive Progressive Preference Optimization
 
